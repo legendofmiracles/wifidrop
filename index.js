@@ -1,15 +1,16 @@
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
+var os = require('os');
+var ip = require('ip')
 
-console.log();
-
+console.log(ip.address());
 http.createServer(function (req, res) {
   if (req.url == '/fileupload') {
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
       var oldpath = files.filetoupload.path;
-      var newpath = '/home/legendofmiracles/Downloads/' + files.filetoupload.name;
+      var newpath = os.homedir()+ '/Downloads/' + files.filetoupload.name;
       fs.copyFile(oldpath, newpath, (err) => {
         if (err) throw err;
         console.log(oldpath + ' was copied to ' + newpath);
