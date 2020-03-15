@@ -4,7 +4,9 @@ var fs = require('fs');
 var os = require('os');
 var ip = require('ip')
 
-console.log(ip.address());
+
+console.log("Your local-ip adress is: "+ip.address());
+
 http.createServer(function (req, res) {
   if (req.url == '/fileupload') {
     var form = new formidable.IncomingForm();

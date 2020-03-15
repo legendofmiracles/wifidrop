@@ -1,4 +1,5 @@
 #!/bin/sh
+#! DONT TAKE THIS SCRIPT OUT OF THE DIRECTORY thanks
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd $SCRIPTPATH
