@@ -29,7 +29,7 @@ http.createServer(function (req, res) {
     res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
     res.write('<label>Select the file to upload here</label><br>');
     res.write('<input type="file" name="filetoupload"><br>');
-    res.write('<input type="submit>');
+    res.write('<input type="submit value="Send File>');
     res.write('</form>');
     return res.end();
   }
